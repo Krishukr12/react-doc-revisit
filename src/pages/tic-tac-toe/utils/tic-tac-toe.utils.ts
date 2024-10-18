@@ -1,3 +1,5 @@
+import { Player } from "../model/square.model";
+
 export const isSomeOneWonGame = (currentBoard: string[]): boolean => {
   const winningCombinations = [
     [0, 1, 2],
@@ -23,4 +25,8 @@ export const isSomeOneWonGame = (currentBoard: string[]): boolean => {
   }
 
   return false;
+};
+
+export const isGameOvered = (currentBoard: Player[]): boolean => {
+  return !currentBoard.includes("");
 };
